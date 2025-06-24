@@ -33,7 +33,7 @@ http_archive(
 
 
 ## Expected behavior
-The deps are updated correctly.
+The `sha256`, `strip_prefix` and the urls are updated correctly.
 
 ## Link to the Renovate issue or Discussion
 https://github.com/renovatebot/renovate/discussions/36678
