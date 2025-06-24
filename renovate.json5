@@ -1,27 +1,5 @@
 {
-  extends: ['group:monorepos'],
-  dependencyDashboard: true,
-  rangeStrategy: 'replace',
-  automerge: false,
-
-  // Commit and PR customization
-  commitBody: 'See associated pull request for more information.',
-  semanticCommits: 'enabled',
-  semanticCommitScope: '',
-  semanticCommitType: 'build',
-  labels: ['area: build & ci', 'action: merge'],
-
-
   packageRules: [
-
-    // Group all non-major updates (minor and patch) together
-    {
-      groupName: 'all non-major dependencies',
-      matchDepNames: ['*', '!node', '!pnpm', '!npm', '!yarn'],
-      matchUpdateTypes: ['digest', 'patch', 'minor'],
-    },
-
-
     // Group Bazel updates
     {
       groupName: 'bazel dependencies',
