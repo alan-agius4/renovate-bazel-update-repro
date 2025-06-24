@@ -1,7 +1,8 @@
 # 36678
 
-## Current behavior
+Reproduction for [Renovate issue 36678](https://github.com/renovatebot/renovate/issues/36678).
 
+## Current behavior
 
 Bazel dependencies are not being updated correctly when they are grouped.
 
