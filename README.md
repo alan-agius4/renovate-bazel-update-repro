@@ -6,6 +6,7 @@
 Bazel dependencies are not being updated correctly when they are grouped.
 
 Example group updated (incorrect): https://github.com/alan-agius4/renovate-bazel-update-repro/pull/4/files
+
 Example of ungrouped update (correct): https://github.com/alan-agius4/renovate-bazel-update-repro/pull/1/files
 
 ```diff
