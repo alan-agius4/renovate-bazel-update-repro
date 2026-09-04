@@ -20,7 +20,7 @@ http_archive(
 http_archive(
     name = "build_bazel_rules_nodejs",
     sha256 = "5dd1e5dea1322174c57d3ca7b899da381d516220793d0adef3ba03b9d23baa8e",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.3/rules_nodejs-5.8.3.tar.gz"],
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/v6.7.6/rules_nodejs-5.8.3.tar.gz"],
 )
 
 load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
@@ -29,9 +29,9 @@ build_bazel_rules_nodejs_dependencies()
 
 http_archive(
     name = "aspect_rules_js",
-    sha256 = "83e5af4d17385d1c3268c31ae217dbfc8525aa7bcf52508dc6864baffc8b9501",
-    strip_prefix = "rules_js-2.3.7",
-    url = "https://github.com/aspect-build/rules_js/releases/download/v2.3.7/rules_js-v2.3.7.tar.gz",
+    sha256 = "efdb6d8a0962ebed5f12ab05ee9f8d0973ffe0be2b1e3f3816d35b8836a8e3a4",
+    strip_prefix = "rules_js-3.4.1",
+    url = "https://github.com/aspect-build/rules_js/releases/download/v3.4.1/rules_js-v3.4.1.tar.gz",
 )
 
 load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
@@ -41,7 +41,7 @@ rules_js_dependencies()
 http_archive(
     name = "rules_pkg",
     sha256 = "8c20f74bca25d2d442b327ae26768c02cf3c99e93fad0381f32be9aab1967675",
-    urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.8.1/rules_pkg-0.8.1.tar.gz"],
+    urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/1.3/rules_pkg-0.8.1.tar.gz"],
 )
 
 load("@bazel_tools//tools/sh:sh_configure.bzl", "sh_configure")
@@ -122,9 +122,9 @@ rules_js_register_toolchains(
 
 http_archive(
     name = "aspect_bazel_lib",
-    sha256 = "e5131e44db23459bd1ed04635f2ae5436bc83f5e38629e07b75c0bf206f09245",
-    strip_prefix = "bazel-lib-2.17.1",
-    url = "https://github.com/aspect-build/bazel-lib/releases/download/v2.17.1/bazel-lib-v2.17.1.tar.gz",
+    sha256 = "c75f8c375f9f2c73a565dba188f91a4e8d7ca16dd2b6152d3886c26bbf1c6532",
+    strip_prefix = "bazel-lib-3.7.2",
+    url = "https://github.com/aspect-build/bazel-lib/releases/download/v3.7.2/bazel-lib-v3.7.2.tar.gz",
 )
 
 load("@aspect_bazel_lib//lib:repositories.bzl", "aspect_bazel_lib_dependencies", "aspect_bazel_lib_register_toolchains")
