@@ -4,23 +4,23 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file"
 
 http_archive(
     name = "bazel_skylib",
-    sha256 = "bc283cdfcd526a52c3201279cda4bc298652efa898b10b4db0837dc51652756f",
+    sha256 = "37cdfbc6faefea94f7b37760a305c98c08981116c2bc9e821e3b423221fad8c8",
     urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.7.1/bazel-skylib-1.7.1.tar.gz",
-        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.7.1/bazel-skylib-1.7.1.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.9.2/bazel-skylib-1.9.2.tar.gz",
+        "https://github.com/bazelbuild/bazel-skylib/releases/download/1.9.2/bazel-skylib-1.9.2.tar.gz",
     ],
 )
 
 http_archive(
     name = "io_bazel_rules_webtesting",
-    sha256 = "e9abb7658b6a129740c0b3ef6f5a2370864e102a5ba5ffca2cea565829ed825a",
-    urls = ["https://github.com/bazelbuild/rules_webtesting/releases/download/0.3.5/rules_webtesting.tar.gz"],
+    sha256 = "574f1c0aa072c187194d60beda7f5be15e139a5e0096089a7710818eec3a4f62",
+    urls = ["https://github.com/bazelbuild/rules_webtesting/releases/download/0.4.1/rules_webtesting-0.4.1.tar.gz"],
 )
 
 http_archive(
     name = "build_bazel_rules_nodejs",
-    sha256 = "5dd1e5dea1322174c57d3ca7b899da381d516220793d0adef3ba03b9d23baa8e",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.3/rules_nodejs-5.8.3.tar.gz"],
+    sha256 = "a1295b168f183218bc88117cf00674bcd102498f294086ff58318f830dd9d9d1",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.5/rules_nodejs-5.8.5.tar.gz"],
 )
 
 load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
@@ -29,9 +29,9 @@ build_bazel_rules_nodejs_dependencies()
 
 http_archive(
     name = "aspect_rules_js",
-    sha256 = "83e5af4d17385d1c3268c31ae217dbfc8525aa7bcf52508dc6864baffc8b9501",
-    strip_prefix = "rules_js-2.3.7",
-    url = "https://github.com/aspect-build/rules_js/releases/download/v2.3.7/rules_js-v2.3.7.tar.gz",
+    sha256 = "94a3cfe9a0b8d24b3738adbb2193e3c34bd94048c1841c6035b7ab3d3fe68e2d",
+    strip_prefix = "rules_js-2.9.3",
+    url = "https://github.com/aspect-build/rules_js/releases/download/v2.9.3/rules_js-v2.9.3.tar.gz",
 )
 
 load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
@@ -40,8 +40,8 @@ rules_js_dependencies()
 
 http_archive(
     name = "rules_pkg",
-    sha256 = "8c20f74bca25d2d442b327ae26768c02cf3c99e93fad0381f32be9aab1967675",
-    urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.8.1/rules_pkg-0.8.1.tar.gz"],
+    sha256 = "d250924a2ecc5176808fc4c25d5cf5e9e79e6346d79d5ab1c493e289e722d1d0",
+    urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.10.1/rules_pkg-0.10.1.tar.gz"],
 )
 
 load("@bazel_tools//tools/sh:sh_configure.bzl", "sh_configure")
@@ -122,9 +122,9 @@ rules_js_register_toolchains(
 
 http_archive(
     name = "aspect_bazel_lib",
-    sha256 = "e5131e44db23459bd1ed04635f2ae5436bc83f5e38629e07b75c0bf206f09245",
-    strip_prefix = "bazel-lib-2.17.1",
-    url = "https://github.com/aspect-build/bazel-lib/releases/download/v2.17.1/bazel-lib-v2.17.1.tar.gz",
+    sha256 = "94e192033ca8027f26de71c9000a67ef9c73695c2b88e2c559045170917ead0c",
+    strip_prefix = "bazel-lib-2.22.5",
+    url = "https://github.com/aspect-build/bazel-lib/releases/download/v2.22.5/bazel-lib-v2.22.5.tar.gz",
 )
 
 load("@aspect_bazel_lib//lib:repositories.bzl", "aspect_bazel_lib_dependencies", "aspect_bazel_lib_register_toolchains")
@@ -196,9 +196,9 @@ npm_repositories()
 
 http_archive(
     name = "aspect_rules_ts",
-    sha256 = "6b15ac1c69f2c0f1282e41ab469fd63cd40eb2e2d83075e19b68a6a76669773f",
-    strip_prefix = "rules_ts-3.6.0",
-    url = "https://github.com/aspect-build/rules_ts/releases/download/v3.6.0/rules_ts-v3.6.0.tar.gz",
+    sha256 = "7d3de71af89429c076efe8288f083e716b91da51bd4307268efae55ac54876d8",
+    strip_prefix = "rules_ts-3.10.1",
+    url = "https://github.com/aspect-build/rules_ts/releases/download/v3.10.1/rules_ts-v3.10.1.tar.gz",
 )
 
 load("@aspect_rules_ts//ts:repositories.bzl", "rules_ts_dependencies")
@@ -217,9 +217,9 @@ http_file(
 
 http_archive(
     name = "aspect_rules_jasmine",
-    sha256 = "0d2f9c977842685895020cac721d8cc4f1b37aae15af46128cf619741dc61529",
-    strip_prefix = "rules_jasmine-2.0.0",
-    url = "https://github.com/aspect-build/rules_jasmine/releases/download/v2.0.0/rules_jasmine-v2.0.0.tar.gz",
+    sha256 = "1bb9b52f7c7409ef19175f610679f6ab9d2eba79e2f2bda6d5aa2502f732ca25",
+    strip_prefix = "rules_jasmine-2.0.4",
+    url = "https://github.com/aspect-build/rules_jasmine/releases/download/v2.0.4/rules_jasmine-v2.0.4.tar.gz",
 )
 
 load("@aspect_rules_jasmine//jasmine:dependencies.bzl", "rules_jasmine_dependencies")
@@ -230,7 +230,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
     name = "devinfra",
-    commit = "db18d7175d759fdfb3e40d363a1579621d1fcffd",
+    commit = "cde7ad16c16f5c7dbd57b62e8b930443813484ec",
     remote = "https://github.com/angular/dev-infra.git",
 )
 
@@ -255,9 +255,9 @@ register_toolchains(
 
 http_archive(
     name = "aspect_rules_esbuild",
-    sha256 = "530adfeae30bbbd097e8af845a44a04b641b680c5703b3bf885cbd384ffec779",
-    strip_prefix = "rules_esbuild-0.22.1",
-    url = "https://github.com/aspect-build/rules_esbuild/releases/download/v0.22.1/rules_esbuild-v0.22.1.tar.gz",
+    sha256 = "65fc1d55b76baa568247deebbb60dff578cf376211c214fbf03c1c01ff034349",
+    strip_prefix = "rules_esbuild-0.27.0",
+    url = "https://github.com/aspect-build/rules_esbuild/releases/download/v0.27.0/rules_esbuild-v0.27.0.tar.gz",
 )
 
 load("@aspect_rules_esbuild//esbuild:dependencies.bzl", "rules_esbuild_dependencies")
@@ -273,7 +273,7 @@ esbuild_register_toolchains(
 
 git_repository(
     name = "rules_angular",
-    commit = "845ffcd8231832abdcfd6a47211b2feb4d178d7b",
+    commit = "5fa856469c642490a6e381a05d7f58f60fad1913",
     remote = "https://github.com/devversion/rules_angular.git",
 )
 
